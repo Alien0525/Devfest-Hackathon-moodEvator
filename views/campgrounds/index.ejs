@@ -1,0 +1,183 @@
+<%- include ("../partials/header") %>
+
+<!-- Start Landing Page -->
+<div class="landing">
+  <div class="home-wrap">
+    <div class="home-inner"></div>
+  </div>
+</div>
+
+<div class="caption text-center">
+  <h1>Welcome to moodEvator</h1>
+  <h3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+    nostrum numquam sapiente dolor quidem eum ea quo rerum provident minus!
+  </h3>
+  <a class="btn btn-outline-dark btn-lg" href="/campgrounds#stories">Explore</a>
+</div>
+<!-- End Landing Page -->
+
+<!-- <header class="jumbotron pb-1">
+  <div class="container">
+      <h1 class="jumbo-heading"><i class="fas fa-laptop-code"></i> Welcome To Techbook!</h1>
+      <p>View all the recent updates in the field of technology from all over the world || Bleh! Post anything for now. </p>
+      <p>
+         <a class="btn btn-outline-primary btn-lg" href="/campgrounds/new">Add New Post</a>
+      </p>     
+  </div>
+</header> -->
+
+<!-- <div class="row text-center flex-wrap" id="campground-grid">
+ <% campgrounds.forEach(function(campground){ %>
+     <div class="col-lg-3 col-md-4 col-sm-6 py-2">
+         <div class="card">
+            <img src="<%= campground.image %>" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title"><%= campground.name %></h5>
+              <p class="card-text"><a href="/campgrounds/<%= campground._id %>" class="btn btn-outline-dark">More Info</a>
+                
+            </p>
+            </div>
+          </div>
+     </div>
+ <% }); %>
+</div> -->
+
+<div class="container">
+  <div id="stories" class="offset">
+    <div class="narrow stories">
+      <div class="text-center"><h1>STORIES</h1></div>
+      <div class="heading-underline"></div>
+
+      <div class="carousel" data-flickity='{ "lazyLoad": true }'>
+        <% campgrounds.forEach(function(campground){ %>
+        <div class="carousel-cell">
+          <img
+            class="carousel-cell-image"
+            data-flickity-lazyload="<%= campground.image %>"
+            alt="tulip"
+          />
+          <div class="overlay">
+            <%= campground.name %>
+            <p class="card-text">
+              <a href="/campgrounds/<%= campground._id %>" class="btn btn-light"
+                >Read more</a
+              >
+            </p>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+
+      <p class="text-center my-5">
+        <a class="btn btn-outline-dark btn-lg my-3" href="/campgrounds/new"
+          >Add your Story?</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div id="discover" class="offset">
+    <div class="narrow discover">
+      <div class="text-center"><h1>DISCOVER</h1></div>
+      <div class="heading-underline"></div>
+      <main class="page-content">
+        <div class="card-d">
+          <div class="content">
+            <h2 class="title">MUSIC</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, incidunt!
+            </p>
+            <a class="btn-d" href="/campgrounds/music">View</a>
+          </div>
+        </div>
+        <div class="card-d">
+          <div class="content">
+            <h2 class="title">BOOKS</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              a!
+            </p>
+            <a class="btn-d" href="/campgrounds/books">View</a>
+          </div>
+        </div>
+        <div class="card-d">
+          <div class="content">
+            <h2 class="title">MOVIES / TV SHOWS</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+              cupiditate?
+            </p>
+            <a class="btn-d" href="/campgrounds/movies">View</a>
+          </div>
+        </div>
+        <div class="card-d">
+          <div class="content">
+            <h2 class="title">AUGMENTED REALITY</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
+              tenetur!
+            </p>
+            <a class="btn-d" href="">View</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<div class="mx-5">
+  <div class="text-center"><h1 style="color:white">Keep yourself busy and stay motivated!</h1></div>
+  <div class="heading-underline"></div>
+  <div class="row">
+    <div class="col-md-4">
+      <div id="courses" class="offset">
+        <div class="card-d courses">
+          <div class="content">
+            <h2 class="title">Motivational Talks</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
+              tenetur!
+            </p>
+            <a class="btn btn-primary" href="https://in.topresume.com/career-advice/5-inspirational-ted-talks-to-get-you-motivated" target="_blank">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div id="todo" class="offset">
+        <div class="card-d todo">
+          <div class="content">
+            <h2 class="title">Plan your day</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
+              tenetur!
+            </p>
+            <a class="btn btn-primary" href="/campgrounds/todo">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div id="test" class="offset">
+        <div class="card-d test">
+          <div class="content">
+            <h2 class="title">Take a Test?</h2>
+            <p class="copy">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae,
+              tenetur!
+            </p>
+            <a class="btn btn-primary" href="https://depression.org.nz/is-it-depression-anxiety/self-test/depression-test/" target="_blank">YES!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=contact>
+  
+</div>
+
+<%- include ("../partials/footer") %>

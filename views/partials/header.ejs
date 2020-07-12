@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/fixed.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+    
+
+
+    <title>moodEvator</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">moodEvator</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item <%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>">
+          <a href="/campgrounds" class="nav-link">Home</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav  ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/campgrounds#stories">Stories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/campgrounds#discover">Discover</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/campgrounds#contact">Contact</a>
+        </li>
+      </ul>
+      <!-- <form class="form-inline mt-2 mt-md-0 mx-4" action="/campgrounds" method="GET" id="campground-search">
+        <div class="form-group">
+          <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search Post..." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+      </form> -->
+      <ul class="navbar-nav">
+          <% if(!currentUser){ %>
+              <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>">
+                <a href="/login" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>">
+                <a href="/register" class="nav-link">Sign Up</a>
+              </li>
+          <% } else { %>
+              <!-- <li class="nav-item">
+                <a href="" class="nav-link">Signed In As <%= currentUser.username %></a>
+              </li> -->
+              <li class="nav-item">
+                <a href="/logout" class="nav-link">Logout</a>
+              </li>
+          <% } %>
+      </ul>
+    </div>
+  </nav>
+    
+    
+      <% if (error && error.length > 0) {%>
+        <div class="container">
+        <div class="alert alert-danger my-2" role="alert">
+          <%= error %>
+        </div>
+      </div>
+      <% } %>
+      <% if (success && success.length > 0) {%>
+        <div class="container">
+        <div class="alert alert-success my-2" role="alert">
+          <%= success %>
+        </div>
+      </div>
+      <% } %>
+    
+    
+    <div class="container"></div>
+    
+    

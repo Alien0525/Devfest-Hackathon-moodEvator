@@ -1,0 +1,38 @@
+<%- include ("../partials/header") %>
+
+<div class="my-5">
+  <h1 style="text-align: center; padding: 2rem; color: white;"><%=campground.name%></h1>
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-6">
+      <form action="/campgrounds/<%=campground._id%>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="form-label-group">
+            <input class="form-control" type="text" name="campground[name]" value="<%=campground.name%>">
+          <label for="postTitle">Post Title</label>
+        </div>
+        
+
+        
+        <div class="form-label-group">
+          <input class="form-control" type="file" id="image" name="image" accept="image/*">
+          <label for="image">Image</label>
+      </div>
+        
+        <div class="form-label-group">
+            <textarea rows="4" cols="100" class="form-control" type="text" name="campground[description]"><%=campground.description%></textarea>
+        </div>
+        
+        <div class="form-label-group">
+          <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+        </div>
+      </form>
+
+      <hr style="background-color: rgb(139, 133, 133); width: 70%; margin: 0 auto;">
+      <p class="mt-4 mb-3 text-muted text-center">&copy; moodEvator 2020</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<%- include ("../partials/footer") %>

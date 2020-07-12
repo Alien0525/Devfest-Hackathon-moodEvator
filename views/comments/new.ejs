@@ -1,0 +1,19 @@
+<%- include ("../partials/header") %>
+
+    <div  class="login mt-5">
+        <form class="form-signin"  action="/campgrounds/<%= campground._id%>/comments" method="POST" >
+            <div class="text-center mb-4">
+              <h2 class="display-5 mb-3 font-weight-normal">Add New Comment to <%= campground.name%></h2>
+            </div>
+          
+            <div class="form-label-group">
+                <textarea class="form-control" type="text" name="comment[text]" placeholder="text"></textarea>
+            </div>
+          
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit!</button><hr>
+            <hr style="background-color: rgb(139, 133, 133); width: 70%; margin: 0 auto;">
+            <p class="mt-4 mb-3 text-muted text-center">&copy; moodEvator 2020</p>
+        </form>
+    </div>
+    
+<%- include ("../partials/footer") %>

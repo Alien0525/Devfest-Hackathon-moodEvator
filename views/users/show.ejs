@@ -1,0 +1,40 @@
+<%- include ("../partials/header") %>
+
+<div class="m-5 user">
+    <h1 class="display-5">Author</h1>
+    <div class="row">
+        <div class="col-md-4">
+         <div class="card p-2">
+             <div class="card-title my-2">
+              <h4><a>Username : <%= user.username %></a></h4>
+            </div>
+           <img class="card-img-top" src="<%=user.image%>" alt="">
+          
+         </div>
+        </div>
+
+        <div class="col-md-8">
+            <%if(user.bio){%>
+                <h3 class="display-5">About:</h3>
+                <p> <%= user.bio %></p><br>
+            <%}%>
+            
+            <%if(campgrounds){%>
+                <h3><%= user.username %>'s stories:</h3>
+            <div class="list-group">
+                <% campgrounds.forEach(function(campground) { %>
+                    <a href="/campgrounds/<%= campground.id %>" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1"><%= campground.name %></h5>
+                        <small class="text-muted"><%= moment(campground.createdAt).fromNow() %></small>
+                        </div>
+                    </a>
+                <% }); %>
+            </div>
+            <%}%>
+            
+        </div>
+    </div>
+</div>
+
+<%- include ("../partials/footer") %>

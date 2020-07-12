@@ -1,0 +1,27 @@
+<%- include ("./partials/header") %>
+
+<div  class="login">
+    <form class="form-signin" action="/login" method="post">
+        <div class="text-center mb-4">
+          <h1 class="mb-3 font-weight-normal">Login</h1>
+        </div>
+      
+        <div class="form-label-group">
+          <input type="text" name="username" class="form-control" placeholder="username" required autofocus>
+          <label for="inputEmail">Username</label>
+        </div>
+      
+        <div class="form-label-group">
+          <input type="password" class="form-control" name="password" placeholder="Password" required>
+          <label for="inputPassword">Password</label>
+        </div>
+      
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button><hr>
+        <hr style="background-color: rgb(139, 133, 133); width: 70%; margin: 2rem auto;">
+        <p class="text-center">New to moodEvator?<br><a href="/register" class="btn btn-info btn-sm my-2" role="button">Sign Up</a></p>
+        <p class="mt-4 mb-3 text-muted text-center">&copy; moodEvator 2020</p>
+    </form>
+</div>
+
+
+<%- include ("./partials/footer") %>

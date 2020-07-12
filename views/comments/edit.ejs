@@ -1,0 +1,27 @@
+<%- include ("../partials/header") %>
+
+
+
+        <div  class="login">
+            <form class="form-signin"  action="/campgrounds/<%= campground_id%>/comments/<%= comment._id%>?_method=PUT" method="POST" >
+                <div class="text-center mb-4">
+                  <h1 class="mb-3 font-weight-normal">Edit Comment</h1>
+                </div>
+              
+                <div class="form-label-group">
+                    <textarea class="form-control" type="text" name="comment[text]"> <%=comment.text%></textarea>
+                </div>
+              
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit!</button><hr>
+                <hr style="background-color: rgb(139, 133, 133); width: 70%;">
+                <p class="mt-4 mb-3 text-muted text-center">&copy; techbook 2020</p>
+            </form>
+        </div>
+
+        
+    </div>
+    
+
+
+
+<%- include ("../partials/footer") %>

@@ -1,0 +1,97 @@
+<%- include ("./partials/header") %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<div class="center">
+    <h1 class="display-6">What brings you to <i>moodEvator</i>?</h1>
+    <!-- <button id="close" style="float: right;">X</button> -->
+    <form>
+      <input type="checkbox" id="1" name="1" >
+      <label for="1">Develop Gratitude</label><br>
+      <input type="checkbox" id="2" name="2">
+      <label for="2">Reduce Anxiety</label><br>
+      <input type="checkbox" id="3" name="3">
+      <label for="3">Build Self Esteem</label><br>
+      <input type="checkbox" id="4" name="4">
+      <label for="4">Reduce Stress</label><br>
+      <input type="checkbox" id="5" name="5">
+      <label for="5">Increase Happiness</label><br>
+      <input type="checkbox" id="6" name="6">
+      <label for="6">Better Sleep</label><br>
+      <input type="checkbox" id="7" name="7" >
+      <label for="7">Improve Performance</label><br><br>
+      <!-- <input id="show" type="submit" value="Submit"> -->
+    </form>
+    <button class="btn btn-outline-light" id="show" type="submit">Continue</button>
+</div>
+
+
+<script>
+  $('#show').on('click', function () {
+    $('.login').show();
+    $(".center").hide();
+})
+
+// $('#close').on('click', function () {
+//     $('.center').hide();
+//     $('#show').show();
+// })
+</script>
+
+<div class="login hideform">
+  <form class="form-signin" action="/register" method="POST" enctype="multipart/form-data">
+    <div class="text-center mb-4">
+      <h1 class="mb-3 font-weight-normal">Sign Up</h1>
+    </div>
+
+    <div class="form-label-group">
+      <input
+        type="text"
+        name="username"
+        class="form-control"
+        placeholder="Enter a unique username"
+        required
+        autofocus
+      />
+      <label for="inputEmail">Username</label>
+    </div>
+
+    <div class="form-label-group">
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        placeholder="Password"
+        required
+      />
+      <label for="inputPassword">Password</label>
+    </div>
+    <div class="form-label-group">
+      <input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+      <label for="image">Profile Picture</label>
+    </div>
+    <div class="form-label-group">
+      <textarea rows="4" cols="50" class="form-control" type="text" name="bio" placeholder="Bio"></textarea>
+    </div>
+    
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">
+      Sign Up!
+    </button>
+    <hr style="background-color: rgb(139, 133, 133); width: 70%; margin:2rem auto">
+
+    <!-- <div class="form-group" style="width: 80%; margin: 0 auto;">
+      <p class="text-center">Sign up as Admin?</p>
+      <input
+        class="form-control"
+        type="text"
+        name="adminCode"
+        placeholder="Admin Code (optional)"
+      />
+      <label for="inputCode">Enter Admin Code</label>
+    </div> -->
+    <p class="mt-4 mb-3 text-muted text-center">&copy; moodEvator 2020</p>
+  </form>
+</div>
+
+<%- include ("./partials/footer") %>
