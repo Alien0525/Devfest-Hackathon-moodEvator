@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap');
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -61,23 +61,23 @@ html {
   animation: imageAnimation 25s linear infinite;
 }
 .slideshow li:nth-child(1) {
-  background-image: url(https://i.pinimg.com/originals/61/e7/c6/61e7c6ef15c2ce11d85d4deacc318623.jpg);
+  background-image: url(https://images.unsplash.com/photo-1508558936510-0af1e3cccbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
 }
 .slideshow li:nth-child(2) {
-    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-image: url(https://images.unsplash.com/photo-1527174744973-fc9ce02c141d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80);
     animation-delay: 5s;
   }
 .slideshow li:nth-child(3) {
-  background-image: url(https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+  background-image: url(https://images.unsplash.com/photo-1549633030-89d0743bad01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80);
   animation-delay: 10s;
 }
 
 .slideshow li:nth-child(4) {
-  background-image: url(https://images.unsplash.com/photo-1514043133987-e4801c95b2c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1124&q=80);
+  background-image: url(https://images.unsplash.com/photo-1524117074681-31bd4de22ad3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80);
   animation-delay: 15s;
 }
 .slideshow li:nth-child(5) {
-  background-image: url(https://images.unsplash.com/photo-1563207153-f403bf289096?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+  background-image: url(https://images.unsplash.com/photo-1484627147104-f5197bcd6651?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
   animation-delay: 20s;
 }
 
@@ -106,8 +106,9 @@ html {
 h1 {
     color: white;
     text-shadow: 6px 6px 8px #000000;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Grenze Gotisch', cursive;
     transition-duration: 1s;
+    font-size: 7rem!important;
 }
 .button{
     background-color: white; /* Green */

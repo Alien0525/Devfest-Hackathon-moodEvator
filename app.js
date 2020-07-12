@@ -24,7 +24,7 @@ var commentRoutes = require("./routes/comments"),
 //     }
 //   );
 
-mongoose.connect(process.env.databaseURL, {
+mongoose.connect(process.env.databaseURL || "mongodb://localhost/moodEvator", {
   useNewUrlParser: true,
 });
 
