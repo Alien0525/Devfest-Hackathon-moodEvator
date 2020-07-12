@@ -35,6 +35,33 @@ body {
 .logo{
   background-image: url(/img/New\ CorelDRAW\ X5\ Graphic.jpg);
 }
+.button{
+  background-color: black;
+border: none;
+margin-top: 2rem;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+  transition-duration: 1s;
+  border-radius: 16px;
+  opacity: 0;
+  animation: 1.5s slideIn ease-in-out forwards 1s;
+}
+@keyframes slideIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.button:hover {
+  background-color:white; /* Green */
+  color: black;
+  text-decoration: none;
+}
+
 .footer {
   margin-top: 2rem;
   bottom: 0;
@@ -148,6 +175,34 @@ body { font-family: sans-serif; }
   background: #FAFAFA;
 }
 
+@media(max-width: 700px){
+  .stories{
+    background-color: white;
+    color: black;
+    border-radius: 10%;
+    padding: 2rem;
+  }
+  .carousel-cell {
+    width: 80%;
+    height: auto;
+    margin-right: 10px;
+    background:white;
+  }
+  .overlay {
+    position: absolute; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
 .carousel-cell {
   width: 66%;
   height: 400px;
@@ -199,8 +254,8 @@ body { font-family: sans-serif; }
   transition: .5s ease;
   opacity:0;
   color: white;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -589,3 +644,43 @@ body {
     white-space:pre-wrap;
 
  }
+
+ @media (max-width: 600px) { 
+   .caption{
+     margin: 0;
+     left: 0;
+   }
+ }
+
+  
+  
+@media (max-width: 769px){
+  .caption{
+    top: 12%;
+  }
+  .caption h1{
+    
+    /* font-size: 3rem!important; */
+    padding-bottom: .5rem;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    
+  }
+  
+  .caption h3{
+    /* font-size: 2rem!important; */
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    /* letter-spacing: .2rem; */
+   
+  }
+    
+} 
+@media (max-width: 900px){
+  .carousel-cell{
+    height: auto;
+  }
+  
+}
