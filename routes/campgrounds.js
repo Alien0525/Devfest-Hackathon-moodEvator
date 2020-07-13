@@ -95,19 +95,19 @@ router.get("/new", middleware.isLoggedIn, (req, res) => {
 });
 
 // Courses - Show all Courses
-router.get("/courses", middleware.isLoggedIn, (req, res) => {
+router.get("/courses",  (req, res) => {
   res.render("campgrounds/courses.ejs");
 });
 // Movies
-router.get("/movies", middleware.isLoggedIn, (req, res) => {
+router.get("/movies", (req, res) => {
   res.render("campgrounds/movies.ejs");
 });
 // Music
-router.get("/music", middleware.isLoggedIn, (req, res) => {
+router.get("/music", (req, res) => {
   res.render("campgrounds/music.ejs");
 });
 // Books
-router.get("/books", middleware.isLoggedIn, (req, res) => {
+router.get("/books",  (req, res) => {
   res.render("campgrounds/books.ejs");
 });
 // Books
