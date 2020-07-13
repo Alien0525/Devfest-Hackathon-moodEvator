@@ -10,6 +10,7 @@
             <h4><a>Name: <%= campground.author.username %></a></h4>
           </div>
           <p class="card-text">About: <%= campground.author.bio %></p>
+          <a class="btn btn-success" href="/users/<%=campground.author.id%>" >View Profile</a>
          </div>
       </div>
       <div class="col-md-9">
