@@ -156,6 +156,12 @@ h3 {
   background-color: #4d52539d ;
   margin: 0 auto 2rem;
 }
+.heading-underline-white{
+  width: 4rem;
+  height: .2rem;
+  background-color: whitesmoke ;
+  margin: 0 auto 2rem;
+}
 
 /* Stories Gallery */
 /* external css: flickity.css */

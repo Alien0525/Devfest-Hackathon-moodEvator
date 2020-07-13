@@ -1,200 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/todo.css" />
     <title>TODO-LIST</title>
-    <link rel="icon" href="/img/mE_logo_green_white.png" type="image/icon type">
-</head>
-<body>
+    <link
+      rel="icon"
+      href="/img/mE_logo_green_white.png"
+      type="image/icon type"
+    />
+  </head>
+  <body>
     <div class="cont_principal">
-        <div class="cont_centrar">
-        
-          <div class="cont_todo_list_top">
+      <div class="cont_centrar">
+        <div class="cont_todo_list_top">
           <div class="cont_titulo_cont">
             <h3>THINGS TO DO</h3>
-            </div>
-        <div class="cont_add_titulo_cont"><a href="#e" onclick="add_new()"><i class="material-icons">&#xE145;</i></a>
-            </div>
-         
-        <!--   End cont_todo_list_top  -->  </div>
+          </div>
+          <div class="cont_add_titulo_cont">
+            <a href="#e" onclick="add_new()"
+              ><i class="material-icons">&#xE145;</i></a
+            >
+          </div>
+
+          <!--   End cont_todo_list_top  -->
+        </div>
         <div class="cont_crear_new">
           <table class="table">
-        <tr>
-          <th>Action</th>
-          <th>Title</th>
-         <th>Date</th>
+            <tr>
+              <th>Action</th>
+              <th>Title</th>
+              <th>Date</th>
             </tr>
             <tr>
-            <td><select name="" id="action_select">
-         <option value="SHOPPING">SHOPPING</option>
-         <option value="WORK">WORK</option> <option value="SPORT">SPORT</option> <option value="MUSIC">MUSIC</option><option value="MOVIE">MOVIE</option><option value="BOOK">BOOK</option><option value="TV SHOW">TV SHOW</option> 
-              </select>
-        <!-- End td 1 -->
+              <td>
+                <select name="" id="action_select">
+                  <option value="SHOPPING">SHOPPING</option>
+                  <option value="WORK">WORK</option>
+                  <option value="SPORT">SPORT</option>
+                  <option value="MUSIC">MUSIC</option
+                  ><option value="MOVIE">MOVIE</option
+                  ><option value="BOOK">BOOK</option
+                  ><option value="TV SHOW">TV SHOW</option>
+                </select>
+                <!-- End td 1 -->
               </td>
-               <td>
-        <input type="text" class="input_title_desc" />      
-        
-                 <!-- End td 2 -->
+              <td>
+                <input type="text" class="input_title_desc" />
+
+                <!-- End td 2 -->
               </td>
-            <td>
-        <select name="" class="input_description_title"  id="date_select">
-         <option value="TODAY">TODAY</option>
-         <option value="TOMORROW">TOMORROW</option>       </select>
-        
-              <!-- End td 3 -->
+              <td>
+                <select
+                  name=""
+                  class="input_description_title"
+                  id="date_select"
+                >
+                  <option value="TODAY">TODAY</option>
+                  <option value="TOMORROW">TOMORROW</option>
+                </select>
+
+                <!-- End td 3 -->
               </td>
-            </tr>
-        <tr>
-           <th class="titl_description" >Description</th>
-            </tr>
-        <tr>
-        
-          <td colspan="3">
-          <input type="text" class="input_description" required />
-          </td>
             </tr>
             <tr>
-            <td colspan="3">
-          <button class="btn_add_fin"  onclick="add_to_list()">ADD</button>
-          </td>
+              <th class="titl_description">Description</th>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <input type="text" class="input_description" required />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <button class="btn_add_fin" onclick="add_to_list()">ADD</button>
+              </td>
             </tr>
           </table>
-          <!--   End cont_crear_new  --> 
-          </div>
-          
-          
+          <!--   End cont_crear_new  -->
+        </div>
+
         <div class="cont_princ_lists">
-        <ul>
-          <li class="list_book li_num_0_1">
-          <div class="col_md_1_list">
-            <p>BOOK</p>
-            </div>
-        <div class="col_md_2_list">
-            <h4>The Fault in our Stars</h4>
-        <p>John Green</p>
-            </div>
-            <div class="col_md_3_list">
-        <div class="cont_text_date">
-        <p>TODAY</p>      
-              </div>    
-        <div class="cont_btns_options">
           <ul>
-         
-            <li><a href="#" onclick="finish_action('0','0_1');"><i class="material-icons">&#xE5CA;</i></a></li>
-          </ul>    
+            <li class="list_book li_num_0_1">
+              <div class="col_md_1_list">
+                <p>BOOK</p>
               </div>
-            </div>
-          </li>
-        <!-- <li class="list_work"></li>
+              <div class="col_md_2_list">
+                <h4>The Fault in our Stars</h4>
+                <p>John Green</p>
+              </div>
+              <div class="col_md_3_list">
+                <div class="cont_text_date">
+                  <p>TODAY</p>
+                </div>
+                <div class="cont_btns_options">
+                  <ul>
+                    <li>
+                      <a href="#" onclick="finish_action('0','0_1');"
+                        ><i class="material-icons">&#xE5CA;</i></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="list_work"></li>
           <li class="list_sport"></li>
           <li class="list_music"></li>
-         -->  </ul>
-        <!--   End cont_todo_list_top  -->   </div>
-          
-          
-          <!--   End cont_central  -->
-          </div>
+         -->
+          </ul>
+          <!--   End cont_todo_list_top  -->
         </div>
-        <script>
-            var contador = 0
-,   select_opt = 0;
 
-function add_to_list(){
-var action = document.querySelector('#action_select').value,
-description = document.querySelector('.input_description').value, 
-title = document.querySelector('.input_title_desc').value,
-date = document.getElementById('date_select').value;
- 
+        <!--   End cont_central  -->
+      </div>
+    </div>
+    <script>
+      var contador = 0,
+        select_opt = 0;
 
-switch (action) {
-  case "SHOPPING":
- select_opt  = 0;
-    break;
-case "WORK":
-select_opt = 1; 
-    break;
-case "SPORT":
- select_opt = 2;
-    break;
-case "MUSIC":
-select_opt = 3; 
-    break;
+      function add_to_list() {
+        var action = document.querySelector("#action_select").value,
+          description = document.querySelector(".input_description").value,
+          title = document.querySelector(".input_title_desc").value,
+          date = document.getElementById("date_select").value;
 
-case "MOVIE":
-select_opt = 4; 
-    break;
- 
-case "BOOK":
-select_opt = 5; 
-    break;
+        switch (action) {
+          case "SHOPPING":
+            select_opt = 0;
+            break;
+          case "WORK":
+            select_opt = 1;
+            break;
+          case "SPORT":
+            select_opt = 2;
+            break;
+          case "MUSIC":
+            select_opt = 3;
+            break;
 
-case "TV SHOW":
-select_opt = 6; 
-    break;
-}  
-  
-var class_li  =['list_shopping list_dsp_none','list_work list_dsp_none','list_sport list_dsp_none','list_music list_dsp_none', 'list_movie list_dsp_none', 'list_book list_dsp_none', 'list_tvShow list_dsp_none'];  
+          case "MOVIE":
+            select_opt = 4;
+            break;
 
-var cont = '<div class="col_md_1_list">    <p>'+action+'</p>    </div> <div class="col_md_2_list"> <h4>'+title+'</h4> <p>'+description+'</p> </div>    <div class="col_md_3_list"> <div class="cont_text_date"> <p>'+date+'</p>  </div>  <div class="cont_btns_options">    <ul>  <li><a href="#finish" onclick="finish_action('+select_opt+','+contador+');" ><i class="material-icons">&#xE5CA;</i></a></li>   </ul>  </div>    </div>';  
- 
-var li = document.createElement('li')  
-li.className = class_li[select_opt]+" li_num_"+contador;
+          case "BOOK":
+            select_opt = 5;
+            break;
 
-li.innerHTML = cont;
-document.querySelectorAll('.cont_princ_lists > ul')[0].appendChild(li);
+          case "TV SHOW":
+            select_opt = 6;
+            break;
+        }
 
-setTimeout(function(){  document.querySelector('.li_num_'+contador).style.display = "block";
-},100);
-  
-setTimeout(function(){
-  document.querySelector('.li_num_'+contador).className = "list_dsp_true "+class_li[select_opt]+" li_num_"+contador;
-contador++;
-},200);
+        var class_li = [
+          "list_shopping list_dsp_none",
+          "list_work list_dsp_none",
+          "list_sport list_dsp_none",
+          "list_music list_dsp_none",
+          "list_movie list_dsp_none",
+          "list_book list_dsp_none",
+          "list_tvShow list_dsp_none",
+        ];
 
-}
+        var cont =
+          '<div class="col_md_1_list">    <p>' +
+          action +
+          '</p>    </div> <div class="col_md_2_list"> <h4>' +
+          title +
+          "</h4> <p>" +
+          description +
+          '</p> </div>    <div class="col_md_3_list"> <div class="cont_text_date"> <p>' +
+          date +
+          '</p>  </div>  <div class="cont_btns_options">    <ul>  <li><a href="#finish" onclick="finish_action(' +
+          select_opt +
+          "," +
+          contador +
+          ');" ><i class="material-icons">&#xE5CA;</i></a></li>   </ul>  </div>    </div>';
 
-function finish_action(num,num2) {
- 
-var class_li  =['list_shopping list_dsp_true','list_work  list_dsp_true','list_sport list_dsp_true','list_music list_dsp_true', 'list_movie list_dsp_none', 'list_book list_dsp_none', 'list_tvShow list_dsp_none'];   
-console.log('.li_num_'+num2);
- document.querySelector('.li_num_'+num2).className = class_li[num]+" list_finish_state"; 
-setTimeout(function(){
-           del_finish();
-           },500);
-}
+        var li = document.createElement("li");
+        li.className = class_li[select_opt] + " li_num_" + contador;
 
-function del_finish(){
-var li = document.querySelectorAll('.list_finish_state');
-    for(var e = 0; e < li.length; e++){
-/* li[e].style.left = "-100px"; */    
-li[e].style.opacity = "0";
-li[e].style.height = "0px";      
-li[e].style.margin = "0px";      
-    }
+        li.innerHTML = cont;
+        document.querySelectorAll(".cont_princ_lists > ul")[0].appendChild(li);
 
-  setTimeout(function(){
-var li = document.querySelectorAll('.list_finish_state');
-    for(var e = 0; e < li.length; e++){
-  li[e].parentNode.removeChild(li[e]); 
-    }
-  },500);
-  
-  
-}
-var t = 0;
-function add_new(){  
-if(t % 2 == 0){  
- document.querySelector('.cont_crear_new').className = "cont_crear_new cont_crear_new_active";
+        setTimeout(function () {
+          document.querySelector(".li_num_" + contador).style.display = "block";
+        }, 100);
 
-  document.querySelector('.cont_add_titulo_cont').className = "cont_add_titulo_cont cont_add_titulo_cont_active";
-  t++;
-}else {  document.querySelector('.cont_crear_new').className = "cont_crear_new";
-document.querySelector('.cont_add_titulo_cont').className = "cont_add_titulo_cont";  
-  t++;
-  } 
-}
-        </script>
-</body>
+        setTimeout(function () {
+          document.querySelector(".li_num_" + contador).className =
+            "list_dsp_true " + class_li[select_opt] + " li_num_" + contador;
+          contador++;
+        }, 200);
+      }
+
+      function finish_action(num, num2) {
+        var class_li = [
+          "list_shopping list_dsp_true",
+          "list_work  list_dsp_true",
+          "list_sport list_dsp_true",
+          "list_music list_dsp_true",
+          "list_movie list_dsp_none",
+          "list_book list_dsp_none",
+          "list_tvShow list_dsp_none",
+        ];
+        console.log(".li_num_" + num2);
+        document.querySelector(".li_num_" + num2).className =
+          class_li[num] + " list_finish_state";
+        setTimeout(function () {
+          del_finish();
+        }, 500);
+      }
+
+      function del_finish() {
+        var li = document.querySelectorAll(".list_finish_state");
+        for (var e = 0; e < li.length; e++) {
+          /* li[e].style.left = "-100px"; */
+
+          li[e].style.opacity = "0";
+          li[e].style.height = "0px";
+          li[e].style.margin = "0px";
+        }
+
+        setTimeout(function () {
+          var li = document.querySelectorAll(".list_finish_state");
+          for (var e = 0; e < li.length; e++) {
+            li[e].parentNode.removeChild(li[e]);
+          }
+        }, 500);
+      }
+      var t = 0;
+      function add_new() {
+        if (t % 2 == 0) {
+          document.querySelector(".cont_crear_new").className =
+            "cont_crear_new cont_crear_new_active";
+
+          document.querySelector(".cont_add_titulo_cont").className =
+            "cont_add_titulo_cont cont_add_titulo_cont_active";
+          t++;
+        } else {
+          document.querySelector(".cont_crear_new").className =
+            "cont_crear_new";
+          document.querySelector(".cont_add_titulo_cont").className =
+            "cont_add_titulo_cont";
+          t++;
+        }
+      }
+    </script>
+  </body>
 </html>
