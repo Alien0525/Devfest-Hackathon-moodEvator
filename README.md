@@ -1,7 +1,7 @@
 # moodEvator
 A website built for people to fight depression and fall in love with themselves again! ✌
 
-###FEATURES:
+### FEATURES:
 
 - A person can sign up by entering username, password, profile picture, bio.
 Image addition from memory has been done using Cloudinary. All the data is stored using mongoDB.
@@ -10,5 +10,5 @@ Reader can visit Author's profile page from the post. The profile page contains 
 - Discover section is divided into four categories. Here we recommend visitor's movies, songs, TV Shows, books and a yoga app built using AR to motivate feeling suffering from depression.
 - Next section links to a motivational talks website and a test website(based on depression). It also has a todo list for users to pan thier work accordingy and keep themselves busy.
 
-##TECH USED:
+## TECH USED:
 HTML5, CSS3, Javascript, EJS, NodeJS, MongoDB
