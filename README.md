@@ -4,7 +4,7 @@ A website built for people to fight depression and fall in love with themselves 
 ### FEATURES:
 
 - A person can sign up by entering username, password, profile picture, bio.
-Image addition from memory has been done using Cloudinary. All the data is stored using mongoDB.
+Image addition from memory has been done using a multer and cloudinary. All the data is stored using mongoDB.
 - User can upload his/her story and share his/her feelings. Anyone can view these stories. People who have an account can comment. Comments can be edited and deleted. User can edit or delete his/her own story.
 Reader can visit Author's profile page from the post. The profile page contains username, bio, profile picuters, and list of all the stories posted by author.
 - Discover section is divided into four categories. Here we recommend visitor's movies, songs, TV Shows, books and a yoga app built using AR to motivate feeling suffering from depression.
